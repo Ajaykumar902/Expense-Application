@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Home.css">
+  </head>
+  <body>
+    <div class="parent">
+        <div class="solid-circle"></div>
+        <div class="header-home">
+            <h4 class="m-0">Expense Tracker <img src="" alt=""/> </h4>
+            <button id="click-here-btn" class="btn btn-md">Click Here </button>
+        </div>
+        <div class="main-content">
+            <h2 class="main-content-text">Hello, <img src="" alt=""/> please enter your<br/>
+            <span id="Name">Name</span></h2>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control email" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+      let emailInput=document.getElementsByClassName('email')[0]
+      
+      let div=document.getElementsByClassName('main-content')[0];
+     
+
+      let anchorEle=document.createElement('a');
+      
+      div.appendChild(anchorEle);
+
+      let btnEle=document.createElement('button')
+      btnEle.innerText='Login';
+      btnEle.id="login-button"
+      btnEle.classList.add('btn','btn-sm')
+      anchorEle.appendChild(btnEle);
+      
+      btnEle.addEventListener('click',()=>{
+        let emailAddress=emailInput.value.trim();
+        if(emailAddress==='' || !emailAddress.endsWith('@gmail.com')){
+          alert('Please Enter a valid Email Address');
+          return;
+        }else{
+          window.location.href="./Tracker.html"
+        }
+      })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>
